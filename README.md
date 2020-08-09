@@ -1,3 +1,3 @@
 ## Welcome to JugaadX!
 
-## Stay tuned for updates. 
+### Stay tuned for updates. 
