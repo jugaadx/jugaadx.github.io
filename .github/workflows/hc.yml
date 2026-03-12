@@ -1,0 +1,22 @@
+name: My On-Demand Action
+
+# This is the "on-demand" trigger
+on:
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Why are you running this?'
+        required: true
+        default: 'Just testing things out!'
+
+jobs:
+  greet-user:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        run: |
+          echo "Hello from GitHub Actions!"
+          echo "Reason for run: ${{ github.event.inputs.reason }}"
+      
+      - name: Check the Date
+        run: date
